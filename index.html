@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space">
+  <meta name="keywords" content="Robotics, Humanoid, Whole-body Control, Whole-body Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space
+  </title>
+
+  <link rel="apple-touch-icon" sizes="57x57"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-180x180.png" />
+
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-196x196.png"
+    sizes="196x196" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-192x192.png"
+    sizes="192x192" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-128.png" sizes="128x128" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16" />
+
+  <link rel="mask-icon" href="//www-media.stanford.edu/assets/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <meta name="application-name" content="Stanford University" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="//www-media.stanford.edu/assets/favicon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="//www-media.stanford.edu/assets/favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="//www-media.stanford.edu/assets/favicon/mstile-150x150.png" />
+  <meta name="msapplication-square310x310logo" content="//www-media.stanford.edu/assets/favicon/mstile-310x310.png" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ38WT2YPD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QZ38WT2YPD');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://kit.fontawesome.com/19914a84eb.js" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<section class="hero is-link is-fullheight video" style="overflow: hidden; position:relative;">
+  <div class="hero-video" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 56.25vw;">
+    <video playsinline autoplay muted loop>
+      <source src=" ./static/videos/r2s2_full_video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-video is-hidden-tablet is-inline-block-mobile"
+    style="height: 154.28571428vw; width: 100%; min-width:64.81481481vh;min-height:100%;">
+    <video playsinline autoplay muted loop>
+      <source src=" ./static/videos/r2s2_full_video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="overlay"></div>
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head is-hidden-mobile">
+    <header class="navbar">
+      <div class="container is-size-5">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item pl-4 pr-4" href="./static/_CORL_2025__Humanoid_Repo.pdf">
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/pdf.svg" alt="PDF" />
+              </span>
+              <span>Paper</span>
+            </a>
+            <a class="navbar-item  pl-4 pr-4" href="https://zzk273.github.io/R2S2/">
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/arxiv.svg" alt="ArXiv" />
+              </span>
+              <span>arXiv</span> </a>
+            <a href="https://zzk273.github.io/R2S2/" class="navbar-item  pl-4 pr-4">
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/youtube.svg" alt="Youtube" />
+              </span>
+              <span>Video</span> </a>
+            <span class="navbar-item  pl-4 pr-4">
+              <a href="https://zzk273.github.io/R2S2/" class="button is-inverted is-large">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 12rem;">
+        R<sup>2</sup>S<sup>2</sup>
+      </h1>
+      <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 4rem;">
+        Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space
+      </h1>
+      <!-- <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 2rem; opacity: 80%;">
+        Conference on Robot Learning 2024
+      </h1>
+      <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.5rem; opacity: 80%;">
+        <b>Spotlight</b> WCBM Workshop CoRL 2024
+      </h1>
+      <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.5rem; opacity: 80%;">
+        X-Embodiment Workshop CoRL 2024
+      </h1> -->
+
+      <div class="column has-text-centered is-hidden-tablet">
+        <div class="publication-links">
+          <!-- PDF Link. -->
+          <span class="link-block">
+            <a href="./static/umi-on-legs.pdf" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/pdf.svg" alt="PDF" />
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://arxiv.org/abs/2407.10353" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/arxiv.svg" alt="ArXiv" />
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+          <!-- Video Link. -->
+          <span class="link-block">
+            <a href="https://youtu.be/4Bp0q3xHTxE" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/youtube.svg" alt="Youtube" />
+              </span>
+              <span>Video</span>
+            </a>
+          </span>
+          <!-- Code Link. -->
+          <span class="link-block">
+            <a href="https://github.com/real-stanford/umi-on-legs"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot is-hidden-mobile">
+    <nav class="tabs is-boxed is-fullwidth is-size-5">
+      <ul>
+        <!-- <li><a href="#umi">Robot Data without Robots</a></li>
+        <li><a href="#task-tracking">Task Tracking without Simulating Tasks</a></li>
+        <li><a href="#wbc">Whole-body Controller</a></li>
+        <li><a href="#hardware">Hardware & System</a></li>
+        <li><a href="#qa">Q & A</a></li> -->
+      </ul>
+    </nav>
+  </div>
+</section>
+
+
+<section class="section"  style="margin-top: 2rem; margin-bottom: 0rem;">
+  <div class="container has-text-centered" style="margin: 0.1rem auto; max-width: 900px; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0rem;">
+  <!-- <div class="container has-text-centered" style="padding-left: 1000vw; padding-right: 1000vw;"></div> -->
+    <h1 class="title is-2">Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space</h1>
+    <p class="is-size-4">
+      Zhikai Zhang<sup>1,3*</sup>, Chao Chen<sup>3,6*</sup>, Han Xue<sup>1,3*</sup>,
+      <a href="https://42jaylonw.github.io/">Jilong Wang</a><sup>2,3</sup>, Sikai Liang<sup>3,7</sup>, Yun Liu<sup>1,3</sup>, 
+      <a href="https://www.lamda.nju.edu.cn/zhangzz/">Zongzhang Zhang</a><sup>6</sup>, <a href="https://hughw19.github.io/">He Wang</a><sup>2,3</sup>, <a href="https://ericyi.github.io/">Li Yi</a><sup>1,4,5</sup>
+    </p>
+    <p class="is-size-4">
+      <sup>1</sup>Tsinghua University, <sup>2</sup>Peking University, <sup>3</sup>Galbot, 
+      <sup>4</sup>Shanghai AI Laboratory, <sup>5</sup>Shanghai Qi Zhi Institute, 
+      <sup>6</sup>Nanjing University, <sup>7</sup>Tongji University
+    </p>
+  </div>
+</section>
+
+
+<section class="section" id="video" style="margin-top: 0rem;">
+  <div class="container is-max-desktop" style="margin-top: 0rem;">
+    <h2 class="title is-1 has-text-centered is-size-4-mobile"></h2>
+    <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 1rem; overflow: hidden;">
+      <video controls autoplay muted loop playsinline
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./static/videos/r2s2_full_video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="section" id="video">
+  <div class="container is-max-desktop">
+    <h2 class="title is-1 has-text-centered is-size-4-mobile">Technical Summary Video</h2>
+    <iframe width="100%" style="aspect-ratio: 16 / 9;" src="
+      https://www.youtube.com/embed/TODO" title="R2S2 Technical Summary Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Primitive Skills - Locomotion</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="video-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+        
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/locomotion/locomotion_forward-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Forward Locomotion</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/locomotion/locomotion_robust-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Robust Locomotion</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/locomotion/locomotion_side-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Lateral Locomotion</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/locomotion/locomotion_turn-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Turning Locomotion</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Primitive Skills - Body Pose Adjustment</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="video-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+        
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/body/body-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">H1 Body Pose Adjustment</h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Autonomous Tasks</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="video-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+        
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/loco_touch/loco_touch-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Point Touch</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/box/box-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Sequential Box Pickup</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/loco_box/loco_box-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Multi-Height Box Pickup</h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Teleoperation</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="video-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+        
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/tele_operation_clean_table/tele_operation_clean_table-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Desk Cleaning 1</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/teleoperation_loco_clean_table/teleoperation_loco_clean_table-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Desk Cleaning 2</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/teleoperation_clean_high/teleoperation_clean_high-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">High Surface Wiping</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/teleoperation_loco_pickup/teleoperation_loco_pickup-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle">Item Pickup</h2>
+        </div>
+
+        <div class="video-item" style="flex: 0 1 45%; text-align: center;">
+          <video autoplay controls muted loop playsinline style="width: 100%; border-radius: 1rem;">
+            <source src="./static/videos/teleoperation_writing/teleoperation_writing-1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            Writing
+            <img src="./static/images/GALBOT.jpg" alt="Writing illustration" style="height: 1rem; vertical-align: middle; border-radius: 0.25rem;">
+          </h2>        
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humans possess a large reachable space in the 3D world, enabling interaction with objects at varying heights and distances.  However, realizing such large-space reaching on humanoids is a complex whole-body control problem and requires the robot to master diverse skills simultaneously—including base positioning and reorientation, height and body posture adjustments, and end-effector pose control. Learning from scratch often leads to optimization difficulty and poor sim2real transferability.
+            To address this challenge, we propose Real-world-Ready Skill Space (R<sup>2</sup>S<sup>2</sup>). Our approach begins with a carefully designed skill library consisting of real-world-ready primitive skills. We ensure optimal performance and robust sim2real transfer through individual skill tuning and sim2real evaluation. These skills are then ensembled into a unified latent space, serving as a structured prior that helps task execution in an efficient and sim2real transferable manner.
+            A high-level planner, trained to sample skills from this space, enables the robot to accomplish real-world goal-reaching tasks. We demonstrate zero-shot sim2real transfer and validate R<sup>2</sup>S<sup>2</sup> in multiple challenging goal-reaching scenarios, including point touch and box pickup.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+<br>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/pipeline.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+    </div>
+  </div>
+</section>
+
+<div class="pipeline-description"
+     style="margin: 0.1rem auto; max-width: 900px; font-size: 0.95rem; line-height: 1.6;">
+  <p><strong>R<sup>2</sup>S<sup>2</sup> Overview.</strong>
+    We present Real-world-Ready Skill Space (R<sup>2</sup>S<sup>2</sup>), a skill space that encompasses and encodes various real-world-ready motor skills.
+    1) We decompose the complex WBC motor skills into a library of primitive skills, each separately tuned and sim2real evaluated.
+    2) We ensemble multiple primitive skills into a student policy with a variational information bottleneck.
+    3) We train high-level planning policies to sample from R<sup>2</sup>S<sup>2</sup> to efficiently and stably accomplish real-world goal-reaching tasks.
+  </p>
+</div>
+
+
+<section class="section is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 is-size-4-mobile">BibTeX</h2>
+    <pre class="is-hidden-mobile">
+      <code>
+        @TODO
+      </code></pre>
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a href="https://nerfies.github.io/">NeRFies</a> and <a href="https://umi-on-legs.github.io/">UMI on Legs</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
